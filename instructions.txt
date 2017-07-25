@@ -1,0 +1,46 @@
+------DISCLAIMER------
+
+
+Dear Developers,
+
+Please, before using this project, read this file carefully, otherwise you may ruin the whole project.
+
+- When you have something to update on the project, first notify us.
+- Write the date, time, and your name in this file and the description of the update you made before you commit.
+- Please list all new modules and versions you used, and provide links when applicable, to facilitate compatibility.
+- The name of a new commit should match the name of what's updated.
+
+N.B: Please, make sure you don't overwrite other commits. Hint, before commit, check if there's no any other commit made by other devs on the same item(s) you was working on. This note file will be used to track the progress of the project, and individual performance.
+
+
+Model:
+
+# DD/MM/YYYY - HH-MM (in 24hr format)
+	- By: developer's name
+	- Name: Commit name
+	- Updated files: - filename.ext => /full/path/to/the/file
+	- Description: Full description of the commit.
+
+---DIRECTIONS----
+1. Clone the gitrepo
+2. if you downloaded the zip, just extract it.
+3. rename the folder "iBiryo-master" to "oMeal"
+
+
+ ------ MAKE SURE YOU BUILD, NOT DESTROY -------
+
+
+
+1. 26/07/2017 - 00:45
+	- By: Victor NH
+	- Name: Initial commit
+	- Updated files: * all - all project files are uploaded for the first time.
+	- Description: The current progress of the project was pushed to git for the first time.
+
+
+2. 26/072017 - 01:25
+	- By: Victor NH
+	- Name: Added instructions file, and other needed resource
+	- Updated files: - instructions.txt - ./
+					 - resource folder - ./resource
+	- Description: I made the instruction file to make sure the project is always safe and update. I also added a folder where we will keep all useful files(images, docs, ...) for making the app.
