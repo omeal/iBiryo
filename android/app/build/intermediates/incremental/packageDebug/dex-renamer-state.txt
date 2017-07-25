@@ -1,0 +1,4 @@
+#Tue Jul 25 16:04:04 CAT 2017
+base.0=/media/victor/Data/Core Labs/Projects Working/oMeal/oMeal/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/media/victor/Data/Core Labs/Projects Working/oMeal/oMeal/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
