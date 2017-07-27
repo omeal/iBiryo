@@ -61,9 +61,9 @@ export default class App extends Component {
       // NavBar Items
       // barButtonTextStyle = {styles.navBarButtonText} barButtonIconStyle = {styles.barButtonIcon}
 
-	<Router navigationBarStyle = {styles.navbarTest} titleStyle = {styles.navBarTitle} barButtonTextStyle = {styles.navBarButtonText} barButtonIconStyle = {styles.barButtonIcon}>
+	<Router navigationBarStyle = {styles.navbarStyles} titleStyle = {styles.navBarTitle} barButtonTextStyle = {styles.navBarButtonText} barButtonIconStyle = {styles.barButtonIcon}>
 		<Scene key='root'>
-			<Scene key='Signup' component={SignUp} title='Register' style = {styles.navbarTest}></Scene>
+			<Scene key='Signup' component={SignUp} title='Register' style = {styles.navbarStyles}></Scene>
 			<Scene key='Setlocation' component={SetLocation} title='Set Location'></Scene>
 		</Scene>
 	</Router>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   //   marginBottom: 5,
   // },
 
-  navbarTest: {
+  navbarStyles: {
   	backgroundColor: '#ad5a44',
   },
 

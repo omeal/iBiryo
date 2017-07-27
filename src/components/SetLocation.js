@@ -5,6 +5,7 @@ import {
 	StyleSheet,
 	TextInput,
 	TouchableOpacity,
+	Image,
 
 } from 'react-native';
 
@@ -12,32 +13,59 @@ import {
 	Actions,
 } from 'react-native-router-flux';
 
+//const bcg = './assets/wall.jpg';
+
+
 export default class SetLocation extends React.Component{
 	render(){
 		return(
 
-			<View>
-				<View>
-					<TextInput 
-						placeholder="City" 
-						placeholderTextColor="white" 
-						underlineColorAndroid="transparent"
-					/>
-				</View>
+			<View style = {styles.mainContainer}>
+				
 
-				<View>
-					<TextInput 
-						placeholder="Area" 
-						placeholderTextColor="white" 
-						underlineColorAndroid="transparent"
-					/>
-				</View>
+		        <Image
+				  style = {styles.bcgImg}
+		          source={require('./assets/newbck.jpg')}
+		        />
 
-				<View>
-					<TouchableOpacity>
-			            <Text>Show Restaurants</Text>
-			        </TouchableOpacity>
+				<View style = {styles.mainContent}>
+
+					<View style = {styles.setImgContainer}>
+						<Image
+						  style = {styles.setImg}
+				          source={require('./assets/call.jpg')}
+				        />
+					</View>
+
+					<View>
+						<TextInput 
+							style = {styles.formInput}
+							placeholder="City" 
+							placeholderTextColor="white" 
+							underlineColorAndroid="transparent"
+							returnKeyType="done"
+    						autoCapitalize="words"
+						/>
+					</View>
+
+					<View>
+						<TextInput 
+							style = {styles.formInput}
+							placeholder="Area" 
+							placeholderTextColor="white" 
+							underlineColorAndroid="transparent"
+							returnKeyType="done"
+    						autoCapitalize="words"
+						/>
+					</View>
+
+					<View style = {styles.BtnContainer}>
+						<TouchableOpacity style = {styles.showBtn}>
+				            <Text style = {styles.btnText}>Show Restaurants</Text>
+				        </TouchableOpacity>
+					</View>
 				</View>
+				
 
 			</View>
 
@@ -47,12 +75,29 @@ export default class SetLocation extends React.Component{
 
 const styles = StyleSheet.create({
 	mainContainer: {
-		backgroundColor: 'white',
+		//backgroundColor: 'transparent',
 		flex: 1,
+		
+
+
+	},
+
+	bcgImg: {
+		// flex: 1,
+		position: 'absolute',
+		resizeMode: 'cover',
+		width: null,
+		height: null,
+		// zIndex: 100,
+		// marginBottom: 30,
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
 	},
 
 	mainContent: {
-		padding: 25,
+		padding: 50,
 
 	},
 
@@ -73,24 +118,43 @@ const styles = StyleSheet.create({
 	},
 
 	formInput: {
-		borderBottomColor: 'grey',
-		borderBottomWidth: 1,
+		borderBottomColor: 'white',
+		borderBottomWidth: 1.6,
+		color: 'white',
 	},
 
 	formContainer: {
 		paddingBottom: 40,
 	},
 
-	signUpBtn: {
-		backgroundColor: '#ad5a44',
-		width: 80,
-		height: 50,
+	BtnContainer: {
+		alignItems: 'center',
+	},
+
+	showBtn: {
+		backgroundColor: '#7c5c5c',
+		width: 200,
+		height: 40,
 		alignItems: 'center',
 		justifyContent: 'center',
+		padding: 30,
+		marginTop: 30,
 	},
 
 	btnText: {
 		color: 'white',
 		fontSize: 20,
+	},
+
+	setImg: {
+		height: 150,
+		width: 150,
+		resizeMode: 'center',
+	},
+
+	setImgContainer: {
+		alignItems: 'center',
+		marginBottom: 100,
+		marginTop: 30,
 	},
 })

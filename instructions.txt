@@ -44,3 +44,12 @@ Model:
 	- Updated files: - instructions.txt - ./
 					 - resource folder - ./resource
 	- Description: I made the instruction file to make sure the project is always safe and update. I also added a folder where we will keep all useful files(images, docs, ...) for making the app.
+
+
+
+3. 27/072017 - 03:35
+	- By: Victor NH
+	- Name: Added styles to "Set Location page", and added assets folder
+	- Updated files: - SetLocation.js - ./src/components/
+					 - Assets dir - ./src/components/assets/
+	- Description: I added styles to the "set location" page. I added assets folder.
