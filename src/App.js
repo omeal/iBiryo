@@ -40,8 +40,22 @@ import {
   View,
 } from 'react-native';
 
+import {
+	DrawerNavigator,
+} from 'react-navigation';
+
 import SignUp from './components/SignUp';
 import SetLocation from './components/SetLocation';
+import ConfirmReg from './components/ConfirmReg';
+import RestaurantMenu from './components/RestaurantMenu';
+import RestaurantsInLocation from './components/RestaurantsInLocation';
+import DetailedMenu from './components/DetailedMenu';
+import ProductName from './components/ProductName';
+import ConfirmOrder from './components/ConfirmOrder';
+import ConfirmPaymentVisa from './components/ConfirmPaymentVisa';
+import ThankYouScreen from './components/ThankYouScreen';
+import PaymentMethods from './components/PaymentMethods';
+
 
 import {
 	Router,
@@ -63,8 +77,17 @@ export default class App extends Component {
 
 	<Router navigationBarStyle = {styles.navbarStyles} titleStyle = {styles.navBarTitle} barButtonTextStyle = {styles.navBarButtonText} barButtonIconStyle = {styles.barButtonIcon}>
 		<Scene key='root'>
-			<Scene key='Signup' component={SignUp} title='Register' style = {styles.navbarStyles}></Scene>
-			<Scene key='Setlocation' component={SetLocation} title='Set Location'></Scene>
+			<Scene key='Signup' component={SignUp} title='Register' style = {styles.navbarStyles} hideNavBar={true}></Scene>
+			<Scene key='Setlocation' component={SetLocation} title='Set Location' hideNavBar={true}></Scene>
+			<Scene key='ConfirmReg' component={ConfirmReg} title='Confirm' hideNavBar={true}></Scene>
+			<Scene key='RestaurantsInLocation' component={RestaurantsInLocation} hideNavBar></Scene>
+			<Scene key='RestaurantMenu' component={RestaurantMenu} title='Menu' hideNavBar={true}></Scene>
+			<Scene key='DetailedMenu' component={DetailedMenu} title='Detailed Menu' hideNavBar={true}></Scene>
+      		<Scene key='ProductName' component={ProductName} title='Product Name' hideNavBar={true}></Scene>
+      		<Scene key='ConfirmOrder' component={ConfirmOrder} title='Confirm Order' hideNavBar={true}></Scene>
+      		<Scene key='PaymentMethods' component={PaymentMethods} title='Payment Methods' hideNavBar={true}></Scene>
+      		<Scene key='ConfirmPaymentVisa' component={ConfirmPaymentVisa} title='Confirm Visa' hideNavBar={true}></Scene>
+      		<Scene key='ThankYouScreen' component={ThankYouScreen} title='PThank You' hideNavBar={true}></Scene>
 		</Scene>
 	</Router>
     );

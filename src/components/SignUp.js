@@ -8,9 +8,19 @@ import {
 
 } from 'react-native';
 
+import { 
+  responsiveHeight, 
+  responsiveWidth, 
+  responsiveFontSize 
+} from 'react-native-responsive-dimensions';
+
 import {
 	Actions,
 } from 'react-native-router-flux';
+
+import { 
+	KeyboardAwareScrollView,
+} from 'react-native-keyboard-aware-scroll-view';
 
 export default class SignUp extends React.Component{
 	state = {
@@ -22,9 +32,16 @@ export default class SignUp extends React.Component{
 		return(
 
 			<View style = {styles.mainContainer}>
-				<View style = {styles.mainContent}>
+
+				<View style = {styles.myNavBar}>
+					<View style = {styles.navTitleContainer}>
+						<Text style = {styles.navTitle}>Register</Text>
+					</View>
+				</View>
+
+				<KeyboardAwareScrollView style = {styles.mainContent}>
 					<View style = {styles.regTitleContainer}>
-					<Text style = {styles.regTitle}>Sign up to get started</Text>
+						<Text style = {styles.regTitle}>Sign up to get started</Text>
 					</View>
 
 					<View style = {styles.formContainer}>
@@ -65,13 +82,13 @@ export default class SignUp extends React.Component{
 
 					<View>
 						<TouchableOpacity style = {styles.signUpBtn} onPress = {() => {
-							Actions.Setlocation();
+							Actions.ConfirmReg();
 							// alert(this.state.email + this.state.phone);
 						}}>
-				            <Text style = {styles.btnText}>Sign Up</Text>
+				            <Text style = {styles.btnText}>Sign up</Text>
 				        </TouchableOpacity>
 					</View>
-				</View>
+				</KeyboardAwareScrollView>
 
 			</View>
 
@@ -83,10 +100,13 @@ const styles = StyleSheet.create({
 	mainContainer: {
 		backgroundColor: 'white',
 		flex: 1,
+		alignItems: 'center',
 	},
 
 	mainContent: {
-		padding: 25,
+		//padding: 25,
+		width: responsiveWidth(80),
+		flex: 1,
 
 	},
 
@@ -98,11 +118,11 @@ const styles = StyleSheet.create({
 
 	regTitle: {
 		color: 'red',
-		fontSize: 20,
+		fontSize: responsiveFontSize(3),
 	},
 
 	formTitle: {
-		fontSize: 16,
+		fontSize: responsiveFontSize(2.5),
 		color: 'black',
 	},
 
@@ -117,14 +137,44 @@ const styles = StyleSheet.create({
 
 	signUpBtn: {
 		backgroundColor: '#ad5a44',
-		width: 80,
-		height: 50,
+		width: responsiveWidth(30),
+		height: responsiveHeight(6),
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
 
 	btnText: {
 		color: 'white',
+		fontSize: responsiveFontSize(2.5),
+	},
+
+	myNavBar: {
+		height: 70,
+		width: responsiveWidth(100),
+		backgroundColor: '#ad5a44',
+		zIndex: 100,
+		marginBottom: 20,
+		// borderBottomColor: 'grey',
+		// borderBottomWidth: 5,
+
+	},
+
+	navTitleContainer: {
+		flex: 1,
+		//position: 'absolute',
+		alignItems: 'center',
+		justifyContent: 'center',
+		//flexDirection:'row', 
+		//flexWrap:'wrap',
+	},
+
+	navTitle: {
+		color: 'white',
 		fontSize: 20,
+		//textAlign: 'left',
+		//marginLeft: 100,
+		//padding: 20,
+		//position: 'absolute',
+		//paddingTop: 90,
 	},
 })
